@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="pdfbox-app-2.0.291">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Sqlite/pdfbox-app-2.0.29.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

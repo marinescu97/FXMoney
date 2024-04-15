@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<!-- This file shows a vertical box that represents a menu. -->
+<!-- The content of the menu will be initialized in the Menu Controller. -->
+
+<VBox fx:id="menu" alignment="TOP_CENTER" spacing="20.0" BorderPane.alignment="TOP_CENTER"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.marinescu.fxmoney.Menu">
+    <padding>
+        <Insets bottom="10.0" top="10.0" />
+    </padding>
+    <BorderPane.margin>
+        <Insets bottom="40.0" left="20.0" top="30.0" />
+    </BorderPane.margin>
+</VBox>

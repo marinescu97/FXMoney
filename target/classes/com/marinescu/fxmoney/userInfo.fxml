@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<!-- This file shows information about a user and an account. -->
+
+<VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="500.0" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marinescu.fxmoney.UserInfo">
+    <children>
+        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@icons/checked.png" />
+            </image>
+        </ImageView>
+        <Text fx:id="title" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 30px;" styleClass="text" />
+        <Label fx:id="subtitle" />
+        <GridPane fx:id="clientInfo" vgap="5.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="170.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label contentDisplay="RIGHT" style="-fx-font-size: 25px;" text="Username:" />
+                <Label style="-fx-font-size: 25px;" text="Password:" GridPane.rowIndex="1" />
+                <Label fx:id="account" style="-fx-font-size: 25px;" text="Account name:" visible="false" GridPane.rowIndex="2" />
+                <Label fx:id="iban" style="-fx-font-size: 25px;" text="Account iban:" visible="false" GridPane.rowIndex="3" />
+                <Label fx:id="usernameLbl" style="-fx-font-size: 25px;" GridPane.columnIndex="1" />
+                <Label fx:id="passwordLbl" style="-fx-font-size: 25px;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label fx:id="accNameLbl" style="-fx-font-size: 25px;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label fx:id="accIbanLbl" style="-fx-font-size: 25px;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            </children>
+            <VBox.margin>
+                <Insets bottom="40.0" left="20.0" right="20.0" top="20.0" />
+            </VBox.margin>
+            <padding>
+                <Insets left="50.0" />
+            </padding>
+        </GridPane>
+        <JFXButton fx:id="okBtn" onAction="#closeWindow" text="Ok" focusTraversable="false"/>
+    </children>
+    <padding>
+        <Insets bottom="20.0" top="10.0" />
+    </padding>
+</VBox>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.JFXButton?>
+
+<!-- This file contains a loan request form. -->
+<VBox alignment="TOP_CENTER" onKeyPressed="#keyCloseWindow" prefWidth="650.0" spacing="20.0" stylesheets="@styles/style.css"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.marinescu.fxmoney.LoanForm">
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="105.0" prefWidth="600.0" spacing="10.0">
+            <children>
+                <ImageView fitHeight="105.0" fitWidth="112.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@icons/green-logo.png" />
+                    </image>
+                </ImageView>
+                <Label style="-fx-font-size: 30; -fx-effect: none;" styleClass="title" text="FXMoney" />
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <padding>
+                <Insets left="20.0" top="20.0" />
+            </padding>
+        </HBox>
+        <Separator prefWidth="200.0" />
+        <Label styleClass="title" text="Loan request" />
+        <GridPane vgap="10.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Desired loan amount $" />
+                <Label text="Monthly income $" GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets left="20.0" />
+                    </GridPane.margin></Label>
+                <TextField fx:id="desiredLoan" focusTraversable="false" prefWidth="216.0" GridPane.rowIndex="1" />
+                <TextField fx:id="monthlyIncome" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets left="20.0" />
+                    </GridPane.margin></TextField>
+                <Label fx:id="radioLabel" focusTraversable="false" text="Loan will be used for" GridPane.rowIndex="4" />
+                <RadioButton fx:id="business" focusTraversable="false" mnemonicParsing="false" styleClass="label" text="Business launching" userData="50000" GridPane.rowIndex="5">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="used" />
+                    </toggleGroup>
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="homeImprv" focusTraversable="false" mnemonicParsing="false" styleClass="label" text="Home improvement" toggleGroup="$used" userData="30000" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="education" focusTraversable="false" mnemonicParsing="false" styleClass="label" text="Education" toggleGroup="$used" userData="40000" GridPane.rowIndex="7">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="other" focusTraversable="false" mnemonicParsing="false" styleClass="label" text="Other" toggleGroup="$used" userData="30000" GridPane.rowIndex="8">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="houseBuy" focusTraversable="false" mnemonicParsing="false" styleClass="label" text="House buying" toggleGroup="$used" userData="300000" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </RadioButton>
+                <RadioButton fx:id="investment" focusTraversable="false" mnemonicParsing="false" styleClass="label" text="Investment" toggleGroup="$used" userData="200000" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </RadioButton>
+                <Label prefHeight="23.0" prefWidth="302.0" text="Periods (term in months)" GridPane.rowIndex="2" />
+                <ComboBox fx:id="months" prefWidth="150.0" GridPane.rowIndex="3" />
+            </children>
+        </GridPane>
+        <Separator prefWidth="200.0" />
+        <Label styleClass="title" text="Contact information" />
+        <GridPane prefWidth="576.0" vgap="10.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.0" minWidth="10.0" prefWidth="283.0" />
+                <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="410.0" minWidth="10.0" prefWidth="300.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+            <children>
+                <Label focusTraversable="false" text="First name">
+                    <padding>
+                        <Insets left="60.0" />
+                    </padding></Label>
+                <Label focusTraversable="false" text="Last name" GridPane.rowIndex="1">
+                    <padding>
+                        <Insets left="60.0" />
+                    </padding></Label>
+                <Label focusTraversable="false" text="Email" GridPane.rowIndex="2">
+                    <padding>
+                        <Insets left="60.0" />
+                    </padding></Label>
+                <Label focusTraversable="false" text="Phone number" GridPane.rowIndex="3">
+                    <padding>
+                        <Insets left="60.0" />
+                    </padding></Label>
+                <Label focusTraversable="false" text="PIN" GridPane.rowIndex="4">
+                    <padding>
+                        <Insets left="60.0" />
+                    </padding></Label>
+                <Label focusTraversable="false" text="Date of birth" GridPane.rowIndex="5">
+                    <padding>
+                        <Insets left="60.0" />
+                    </padding></Label>
+                <TextField fx:id="firstName" focusTraversable="false" maxWidth="379.0" prefHeight="32.0" prefWidth="400.0" GridPane.columnIndex="1" />
+                <TextField fx:id="lastName" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="email" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="phoneNumber" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField fx:id="pin" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <DatePicker fx:id="dateOfBirth" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            </children>
+        </GridPane>
+        <HBox alignment="CENTER" prefHeight="51.0" prefWidth="610.0" spacing="20.0">
+            <children>
+                <JFXButton fx:id="submitBtn" defaultButton="true" onAction="#submitBtnHandler" text="Submit" />
+                <JFXButton fx:id="cancelBtn" cancelButton="true" onAction="#closeWindow" text="Cancel" />
+            </children>
+        </HBox>
+
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" />
+    </padding>
+</VBox>

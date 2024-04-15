@@ -1,0 +1,22 @@
+.splashAnchor, .progress-bar{
+    -fx-background-color: #077369;
+}
+.progress-bar > .track, .progress-bar > .bar {
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 10, 0, 0, 0);
+}
+
+.progress-bar > .track{
+    -fx-text-box-border: #077369;
+    -fx-control-inner-background: #077369;
+}
+
+.progress-bar > .bar{
+    -fx-background-color: #CACECDFF;
+    -fx-background-insets: 0;
+}
+
+.progress-bar > .spinner{
+    -fx-background-color: transparent;
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<!-- This file shows a splash screen and appears when the application is loading. -->
+<!-- It contains the logo, and a progress bar that indicates that the application is loading.-->
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" stylesheets="@styles/splashStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.marinescu.fxmoney.SplashScreen">
+   <center>
+       <AnchorPane prefHeight="200.0" prefWidth="400.0" styleClass="splashAnchor" BorderPane.alignment="CENTER">
+           <children>
+               <ImageView fitHeight="264.0" fitWidth="300.0" layoutX="168.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                   <image>
+                       <Image url="@icons/logo.png" />
+                   </image>
+                   <effect>
+                       <DropShadow />
+                   </effect>
+               </ImageView>
+            <ProgressBar fx:id="loadProgress" layoutX="140.0" layoutY="327.0" prefHeight="5.0" prefWidth="320.0" progress="0.0" />
+           </children></AnchorPane>
+   </center>
+</BorderPane>
