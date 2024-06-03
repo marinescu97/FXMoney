@@ -1,0 +1,1 @@
+moduleSearchIndex = [{"l":"com.marinescu.fxmoney"}];updateSearchResults();

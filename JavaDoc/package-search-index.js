@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"com.marinescu.fxmoney","l":"com.marinescu.fxmoney"},{"m":"com.marinescu.fxmoney","l":"com.marinescu.fxmoney.Interfaces"},{"m":"com.marinescu.fxmoney","l":"com.marinescu.fxmoney.Model"}];updateSearchResults();
